@@ -21,6 +21,7 @@
 		6EF84DDC1C8127620022D3F4 /* ItemListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF84DDB1C8127620022D3F4 /* ItemListViewControllerTests.swift */; };
 		6EF84DDE1C8127FA0022D3F4 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF84DDD1C8127FA0022D3F4 /* ItemListViewController.swift */; };
 		6EF84DE01C812AE80022D3F4 /* ItemListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF84DDF1C812AE80022D3F4 /* ItemListDataProvider.swift */; };
+		6EF84DE21C816E680022D3F4 /* ItemListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF84DE11C816E680022D3F4 /* ItemListDataProviderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		6EF84DDB1C8127620022D3F4 /* ItemListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemListViewControllerTests.swift; path = ToDoTests/Controller/ItemListViewControllerTests.swift; sourceTree = SOURCE_ROOT; };
 		6EF84DDD1C8127FA0022D3F4 /* ItemListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemListViewController.swift; path = Controller/ItemListViewController.swift; sourceTree = "<group>"; };
 		6EF84DDF1C812AE80022D3F4 /* ItemListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemListDataProvider.swift; path = Controller/ItemListDataProvider.swift; sourceTree = "<group>"; };
+		6EF84DE11C816E680022D3F4 /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemListDataProviderTests.swift; path = ToDoTests/Controller/ItemListDataProviderTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			children = (
 				6EF84DDB1C8127620022D3F4 /* ItemListViewControllerTests.swift */,
 				6EF84DDD1C8127FA0022D3F4 /* ItemListViewController.swift */,
+				6EF84DE11C816E680022D3F4 /* ItemListDataProviderTests.swift */,
 				6EF84DDF1C812AE80022D3F4 /* ItemListDataProvider.swift */,
 			);
 			name = Controller;
@@ -261,6 +264,7 @@
 				6EF84DDC1C8127620022D3F4 /* ItemListViewControllerTests.swift in Sources */,
 				6EEB48E81C80555C00C10014 /* ToDoTests.swift in Sources */,
 				6EEB48FB1C8055AF00C10014 /* LocationTests.swift in Sources */,
+				6EF84DE21C816E680022D3F4 /* ItemListDataProviderTests.swift in Sources */,
 				6EEB48FD1C80566A00C10014 /* ItemManagerTests.swift in Sources */,
 				6EEB48F91C8055A700C10014 /* ToDoListTests.swift in Sources */,
 			);
