@@ -21,6 +21,7 @@ class InputViewController: UIViewController
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     
+  
     lazy var geocoder = CLGeocoder() // This way we can set our mock to geocoder before we access it in the test the first time. We inject the dependency in the test. In the implementation code, we can use geocoder as it would be a normal property.
     
     var itemManager: ItemManager?
@@ -31,7 +32,7 @@ class InputViewController: UIViewController
         return dateFormatter
     }()
     
-    func save()
+    @IBAction func save()
     {
         guard let titleString = titleTextField.text where titleString.characters.count > 0 else {return}
         let date: NSDate?
@@ -45,11 +46,13 @@ class InputViewController: UIViewController
         }
         
         let descriptionString: String?
+        
         if descriptionTextField.text?.characters.count > 0 {
             descriptionString = descriptionTextField.text
         } else {
             descriptionString = nil
         }
+        
         if let locationName = locationTextField.text where locationName.characters.count > 0{
             if let address = addressTextField.text where address.characters.count > 0 {
                 geocoder.geocodeAddressString(address) {

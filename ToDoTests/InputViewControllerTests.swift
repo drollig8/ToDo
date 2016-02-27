@@ -54,9 +54,27 @@ class InputViewControllerTests: XCTestCase
         mockGeocoder.completionHandler?([placemark],nil)
         let item = sut.itemManager?.itemAtIndex(0)
         
-        let testItem = ToDoItem(title: "The title", itemDescription: "The description", timestamp: 1456095600, location: Location(name: "Office", coordinate: coordinate))
+        let testItem = ToDoItem(title: "Test Title", itemDescription: "Test Description", timestamp: 1456095600, location: Location(name: "Office", coordinate: coordinate))
         
         XCTAssertEqual(item, testItem)
+    }
+    
+    func test_SaveButtonHasSaveAction()
+    {
+        let saveButton:UIButton = sut.saveButton
+        guard let actions = saveButton.actionsForTarget(sut, forControlEvent: .TouchUpInside) else {XCTFail(); return}
+        XCTAssertTrue(actions.contains("save"))
+    }
+    
+    func test_GeocoderWorksAsExpected()
+    {
+        CLGeocoder().geocodeAddressString("Infinite Loop 1, Cupertino") {
+            (placemarks,error) -> Void in
+            let placemark = placemarks?.first
+            let coordinate = placemark?.location?.coordinate
+            guard let latitude = coordinate?.latitude
+            
+        }
     }
     
 }
