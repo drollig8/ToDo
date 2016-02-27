@@ -20,14 +20,17 @@ class ItemListDataProvider: NSObject, UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         
+        guard let itemManager = itemManager else { return 0 }
+        guard let itemSection = Section(rawValue: section) else { fatalError() }
+        
         let numberOfRows: Int
-        switch section {
-        case 0:
-            numberOfRows = itemManager?.toDoCount ?? 0
-        case 1:
-            numberOfRows = itemManager?.doneCount ?? 0
-        default:
-            numberOfRows = 0
+        
+        switch itemSection {
+        case .ToDo:
+            numberOfRows = itemManager.toDoCount
+        case .Done:
+            numberOfRows = itemManager.doneCount
+
         }
         return numberOfRows
     }
