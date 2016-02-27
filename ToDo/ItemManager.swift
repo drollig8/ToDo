@@ -20,7 +20,11 @@ class ItemManager
     
     func addItem(item:ToDoItem)
     {
-        toDoItems.append(item)
+        if !toDoItems.contains(item) {
+            toDoItems.append(item)
+        } else {
+            print("Item \(item) alread exists")
+        }
     }
     
     func itemAtIndex(index: Int) -> ToDoItem
@@ -37,5 +41,11 @@ class ItemManager
     func doneItemAtIndex(index: Int) -> ToDoItem
     {
         return doneItems[index]
+    }
+    
+    func removeAllItems()
+    {
+        toDoItems.removeAll()
+        doneItems.removeAll()
     }
 }
