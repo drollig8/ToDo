@@ -37,7 +37,8 @@ class ItemListDataProvider: NSObject, UITableViewDataSource
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath)
+        return cell
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
