@@ -9,7 +9,8 @@
 import XCTest
 @testable import ToDo
 
-class ItemListViewControllerTests: XCTestCase {
+class ItemListViewControllerTests: XCTestCase
+{
     var sut: ItemListViewController!
 
     override func setUp()
@@ -27,7 +28,6 @@ class ItemListViewControllerTests: XCTestCase {
     
     func test_TableViewIsNotNilAfterViewDidLoad()
     {
-
         XCTAssertNotNil(sut.tableView)
     }
     
@@ -49,6 +49,8 @@ class ItemListViewControllerTests: XCTestCase {
     {
         XCTAssertEqual(sut.tableView.dataSource as? ItemListDataProvider, sut.tableView.delegate as? ItemListDataProvider)
     }
+    
+    
 
 
 }

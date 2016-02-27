@@ -11,7 +11,7 @@
 
 import XCTest
 @testable import ToDo
-class ToDoListTests: XCTestCase {
+class ToDoItemTests: XCTestCase {
     
     override func setUp()
     {

@@ -8,11 +8,28 @@
 
 import UIKit
 
+enum Section: Int {
+    case ToDo
+    case Done
+}
+
 class ItemListDataProvider: NSObject, UITableViewDataSource
 {
+    var itemManager:ItemManager?
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 0
+        
+        let numberOfRows: Int
+        switch section {
+        case 0:
+            numberOfRows = itemManager?.toDoCount ?? 0
+        case 1:
+            numberOfRows = itemManager?.doneCount ?? 0
+        default:
+            numberOfRows = 0
+        }
+        return numberOfRows
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
