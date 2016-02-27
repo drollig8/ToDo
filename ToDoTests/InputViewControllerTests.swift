@@ -72,7 +72,12 @@ class InputViewControllerTests: XCTestCase
             (placemarks,error) -> Void in
             let placemark = placemarks?.first
             let coordinate = placemark?.location?.coordinate
-            guard let latitude = coordinate?.latitude
+            guard let latitude = coordinate?.latitude else {XCTFail(); return}
+            guard let longitude = coordinate?.longitude else {XCTFail(); return}
+//            XCTAssertEqualWithAccuracy(latitude, 37.3316851, accuracy: 0.000001)
+//            XCTAssertEqualWithAccuracy(longitude, -122.0300674, accuracy: 0.000001)
+            XCTAssertEqualWithAccuracy(latitude, 0.0, accuracy: 0.000001)
+            XCTAssertEqualWithAccuracy(longitude, 0.0, accuracy: 0.000001)
             
         }
     }
