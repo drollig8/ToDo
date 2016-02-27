@@ -43,14 +43,20 @@ class InputViewControllerTests: XCTestCase
         sut.descriptionTextField.text = "Test Description"
         
         let mockGeocoder = MockGeocoder()
-        sut.geocoder = mockGeocoder
+        sut.geocoder = mockGeocoder  // Dependency Injection
         sut.itemManager = ItemManager()
         
         sut.save()
         
         placemark = MockPlacemark()
         let coordinate = CLLocationCoordinate2DMake(37.3316851,-122.0300674)
+        placemark.mockCoordinate = coordinate
+        mockGeocoder.completionHandler?([placemark],nil)
+        let item = sut.itemManager?.itemAtIndex(0)
         
+        let testItem = ToDoItem(title: "The title", itemDescription: "The description", timestamp: 1456095600, location: Location(name: "Office", coordinate: coordinate))
+        
+        XCTAssertEqual(item, testItem)
     }
     
 }
