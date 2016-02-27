@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6E9B730F1C81A0CB00146B07 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B730E1C81A0CB00146B07 /* ItemCell.swift */; };
+		6E9B73131C81D9D100146B07 /* ItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B73121C81D9D100146B07 /* ItemCellTests.swift */; };
+		6E9B73151C82081400146B07 /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B73141C82081400146B07 /* DetailViewControllerTests.swift */; };
+		6E9B73191C82090D00146B07 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B73181C82090D00146B07 /* DetailViewController.swift */; };
+		6E9B731B1C820BB300146B07 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9B731A1C820BB300146B07 /* MapKit.framework */; };
+		6E9B731D1C821D2B00146B07 /* InputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B731C1C821D2B00146B07 /* InputViewControllerTests.swift */; };
+		6E9B731F1C821D7C00146B07 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B731E1C821D7C00146B07 /* InputViewController.swift */; };
 		6EEB48D31C80555C00C10014 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEB48D21C80555C00C10014 /* AppDelegate.swift */; };
 		6EEB48D81C80555C00C10014 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EEB48D61C80555C00C10014 /* Main.storyboard */; };
 		6EEB48DA1C80555C00C10014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EEB48D91C80555C00C10014 /* Assets.xcassets */; };
@@ -37,6 +43,12 @@
 
 /* Begin PBXFileReference section */
 		6E9B730E1C81A0CB00146B07 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemCell.swift; path = Controller/ItemCell.swift; sourceTree = "<group>"; };
+		6E9B73121C81D9D100146B07 /* ItemCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCellTests.swift; sourceTree = "<group>"; };
+		6E9B73141C82081400146B07 /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewControllerTests.swift; path = Controller/DetailViewControllerTests.swift; sourceTree = "<group>"; };
+		6E9B73181C82090D00146B07 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controller/DetailViewController.swift; sourceTree = "<group>"; };
+		6E9B731A1C820BB300146B07 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6E9B731C1C821D2B00146B07 /* InputViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewControllerTests.swift; sourceTree = "<group>"; };
+		6E9B731E1C821D7C00146B07 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputViewController.swift; path = Controller/InputViewController.swift; sourceTree = "<group>"; };
 		6EEB48CF1C80555C00C10014 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EEB48D21C80555C00C10014 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EEB48D71C80555C00C10014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E9B731B1C820BB300146B07 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +92,7 @@
 		6EEB48C61C80555B00C10014 = {
 			isa = PBXGroup;
 			children = (
+				6E9B731A1C820BB300146B07 /* MapKit.framework */,
 				6EEB48D11C80555C00C10014 /* ToDo */,
 				6EEB48E61C80555C00C10014 /* ToDoTests */,
 				6EEB48D01C80555C00C10014 /* Products */,
@@ -109,6 +123,9 @@
 			children = (
 				6EEB48E71C80555C00C10014 /* ToDoTests.swift */,
 				6EEB48E91C80555C00C10014 /* Info.plist */,
+				6E9B73121C81D9D100146B07 /* ItemCellTests.swift */,
+				6E9B73141C82081400146B07 /* DetailViewControllerTests.swift */,
+				6E9B731C1C821D2B00146B07 /* InputViewControllerTests.swift */,
 			);
 			path = ToDoTests;
 			sourceTree = "<group>";
@@ -146,6 +163,8 @@
 				6EF84DE11C816E680022D3F4 /* ItemListDataProviderTests.swift */,
 				6EF84DDF1C812AE80022D3F4 /* ItemListDataProvider.swift */,
 				6E9B730E1C81A0CB00146B07 /* ItemCell.swift */,
+				6E9B73181C82090D00146B07 /* DetailViewController.swift */,
+				6E9B731E1C821D7C00146B07 /* InputViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -200,6 +219,11 @@
 				TargetAttributes = {
 					6EEB48CE1C80555C00C10014 = {
 						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					6EEB48E21C80555C00C10014 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -251,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E9B731F1C821D7C00146B07 /* InputViewController.swift in Sources */,
 				6EEB48FF1C80573000C10014 /* ItemManager.swift in Sources */,
 				6EF84DE01C812AE80022D3F4 /* ItemListDataProvider.swift in Sources */,
 				6EF84DDE1C8127FA0022D3F4 /* ItemListViewController.swift in Sources */,
@@ -258,6 +283,7 @@
 				6E9B730F1C81A0CB00146B07 /* ItemCell.swift in Sources */,
 				6EEB48F71C80559D00C10014 /* Location.swift in Sources */,
 				6EEB48D31C80555C00C10014 /* AppDelegate.swift in Sources */,
+				6E9B73191C82090D00146B07 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,8 +295,11 @@
 				6EEB48E81C80555C00C10014 /* ToDoTests.swift in Sources */,
 				6EEB48FB1C8055AF00C10014 /* LocationTests.swift in Sources */,
 				6EF84DE21C816E680022D3F4 /* ItemListDataProviderTests.swift in Sources */,
+				6E9B73131C81D9D100146B07 /* ItemCellTests.swift in Sources */,
 				6EEB48FD1C80566A00C10014 /* ItemManagerTests.swift in Sources */,
+				6E9B731D1C821D2B00146B07 /* InputViewControllerTests.swift in Sources */,
 				6EEB48F91C8055A700C10014 /* ToDoItemTests.swift in Sources */,
+				6E9B73151C82081400146B07 /* DetailViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
